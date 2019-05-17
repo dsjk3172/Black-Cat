@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d ("Test", "Test");
 
+
         //메인 화면
 
         ImageButton imgbtn_main = (ImageButton) findViewById(R.id.imgbtn_Main);
