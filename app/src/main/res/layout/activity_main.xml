@@ -77,63 +77,69 @@
             tools:layout_editor_absoluteY="16dp" />
     </LinearLayout>
 
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="70dp">
 
-    <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="582dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925">
+        <RelativeLayout
+            android:layout_width="410dp"
+            android:layout_height="582dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925">
 
-        <TextView
-            android:id="@+id/Txt_Main_bw"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="47dp"
-            android:layout_marginTop="29dp"
-            android:background="#5D5F5D"
-            android:text="오늘의 명언"
-            android:textColor="#41DADA"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="121dp" />
+            <TextView
+                android:id="@+id/Txt_Main_bw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="47dp"
+                android:layout_marginTop="140dp"
+                android:background="#5D5F5D"
+                android:text="오늘의 명언"
+                android:textColor="#41DADA"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="121dp" />
 
-        <TextView
-            android:id="@+id/Txt_Main_cm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="49dp"
-            android:layout_marginLeft="49dp"
-            android:layout_marginBottom="385dp"
-            android:background="#5D5F5D"
-            android:text="토론 주제"
-            android:textColor="#41DADA"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="324dp" />
+            <TextView
+                android:id="@+id/Txt_Main_cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="49dp"
+                android:layout_marginLeft="49dp"
+                android:layout_marginBottom="385dp"
+                android:background="#5D5F5D"
+                android:text="토론 주제"
+                android:textColor="#41DADA"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="324dp" />
 
-        <TextView
-            android:id="@+id/Txt_Main_br"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="-100dp"
-            android:layout_marginTop="413dp"
-            android:layout_toEndOf="@+id/Txt_Main_bw"
-            android:background="#5D5F5D"
-            android:text="철학 도서 추천"
-            android:textColor="#41DADA"
-            android:textSize="20dp"
-            tools:layout_editor_absoluteX="34dp"
-            tools:layout_editor_absoluteY="470dp" />
+            <TextView
+                android:id="@+id/Txt_Main_br"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="-100dp"
+                android:layout_marginTop="413dp"
+                android:layout_toEndOf="@+id/Txt_Main_bw"
+                android:background="#5D5F5D"
+                android:text="철학 도서 추천"
+                android:textColor="#41DADA"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="470dp" />
 
-    </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
 
 
 </android.support.constraint.ConstraintLayout>

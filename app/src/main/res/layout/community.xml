@@ -80,7 +80,7 @@
 
     <RelativeLayout
         android:layout_width="410dp"
-        android:layout_height="582dp"
+        android:layout_height="700dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -88,12 +88,12 @@
 
 
 
-        <TextView
+        <WebView
+            android:id="@+id/webView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="커뮤니티 액티비티입니다"
-            android:textAlignment="center"
-            android:textSize="30dp"/>
+            android:layout_height="match_parent">
+
+        </WebView>
 
     </RelativeLayout>
 

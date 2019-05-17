@@ -5,11 +5,13 @@ import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class Community extends AppCompatActivity {
 
+    private WebView webView;
     private Object imgbtn;
 
     @Override
@@ -66,5 +68,9 @@ public class Community extends AppCompatActivity {
                 finish();
             }
         });
+
+        // 웹뷰 액티비티
+        webView = (WebView)findViewById(R.id.webView);
+        webView.loadUrl("http://softwareblackcat.com");
     }
 }
