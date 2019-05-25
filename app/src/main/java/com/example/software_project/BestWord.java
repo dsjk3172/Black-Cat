@@ -46,11 +46,11 @@ public class BestWord extends AppCompatActivity { //software_project
 
     ListView listview;
 
-    private static final String TAG_NAME = "name";
-    private static final String TAG_CONTENT ="content";
+    //private static final String TAG_NAME = "name";
+    //private static final String TAG_CONTENT ="content";
 
     //SQLiteDatabase sampleDB = null;
-    ListAdapter adapter;
+    //ListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,7 +148,8 @@ public class BestWord extends AppCompatActivity { //software_project
         });
     }
 
-    public static void setDB(Context ctx) {
+    public static
+    void setDB(Context ctx) {
         File folder = new File(ROOT_DIR);
         if(folder.exists()) {
         } else {
@@ -174,7 +175,7 @@ public class BestWord extends AppCompatActivity { //software_project
         } catch (IOException e) {}
     }
 
-    class ProductDBHelper extends SQLiteOpenHelper {  //새로 생성한 adapter 속성은 SQLiteOpenHelper이다.
+    /*class ProductDBHelper extends SQLiteOpenHelper {  //새로 생성한 adapter 속성은 SQLiteOpenHelper이다.
         public ProductDBHelper(Context context) {
             super(context, "sp.db", null, 1);    // db명과 버전만 정의 한다.
             // TODO Auto-generated constructor stub
@@ -188,6 +189,6 @@ public class BestWord extends AppCompatActivity { //software_project
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
             // TODO Auto-generated method stub
         }
-    }
+    }*/
 
 }

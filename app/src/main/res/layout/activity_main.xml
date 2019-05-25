@@ -137,6 +137,18 @@
                 tools:layout_editor_absoluteX="34dp"
                 tools:layout_editor_absoluteY="470dp" />
 
+            <TextView
+                android:id="@+id/tvSaying"
+                android:layout_width="336dp"
+                android:layout_height="80dp"
+                android:layout_below="@+id/Txt_Main_bw"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="53dp"
+                android:layout_marginLeft="53dp"
+                android:layout_marginTop="7dp"
+                android:text="TextView" />
+
         </RelativeLayout>
     </ScrollView>
 

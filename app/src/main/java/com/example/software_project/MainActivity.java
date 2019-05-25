@@ -1,6 +1,8 @@
 package com.example.software_project;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,7 +11,19 @@ import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import static com.example.software_project.BestWord.setDB;
+
 public class MainActivity extends AppCompatActivity {
+
+    public static final String ROOT_DIR = "/data/data/com.example.software_project/databases/";
+    public SQLiteDatabase db;
+    public Cursor c;
+    ProductDBHelper mHelper;
 
     private Object imgbtn;
 
@@ -17,9 +31,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Date currentTime = Calendar.getInstance().getTime();
 
-        Log.d ("Test", "Test");
-        Log.d ("New branch", "New branch");
+        SimpleDateFormat dayFormat = new SimpleDateFormat("dd", Locale.getDefault());
+        SimpleDateFormat monthFormat = new SimpleDateFormat("MM", Locale.getDefault());
+
+        String month = monthFormat.format(currentTime);
+        String day = dayFormat.format(currentTime);
+
+        String Sday = month + day;
+        String sdayQuery = "SELECT * FROM Saying WHERE _id=" + Sday + ";";
+
+        setDB(this);
+        mHelper = new ProductDBHelper(this);
+        db = mHelper.getWritableDatabase();
+        c = db.rawQuery(sdayQuery, null);
+        startManagingCursor(c);
+
+        String sContent = c.getString(1);
+
+        c.close();
+        db.close();
+
 
         //메인 화면
 
@@ -84,5 +117,10 @@ public class MainActivity extends AppCompatActivity {
         Typeface typeface3 = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
         textView.setTypeface(typeface);
 
+        TextView tvSaying = (TextView) findViewById(R.id.tvSaying);
+        tvSaying.setText(sContent);
+
     }
+
+
 }
