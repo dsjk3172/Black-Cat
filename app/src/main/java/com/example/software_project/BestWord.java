@@ -125,5 +125,4 @@ public class BestWord extends AppCompatActivity { //software_project
             }
         });
     }
-
 }

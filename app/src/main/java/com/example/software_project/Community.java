@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.webkit.WebViewClient;
+import android.webkit.WebView;
 
 public class Community extends AppCompatActivity {
 
@@ -71,6 +74,7 @@ public class Community extends AppCompatActivity {
 
         // 웹뷰 액티비티
         webView = (WebView)findViewById(R.id.webView);
-        webView.loadUrl("http://softwareblackcat.com");
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://softwareblackcat.com/index.php?mid=comunnity");
     }
 }
