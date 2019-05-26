@@ -122,6 +122,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        tvSaying.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_s = new Intent(getApplicationContext(), Saying.class);
+                startActivity(intent_s);
+                finish();
+            }
+        });
+
 
         TextView textView = (TextView) findViewById(R.id.Txt_Main_bw);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
