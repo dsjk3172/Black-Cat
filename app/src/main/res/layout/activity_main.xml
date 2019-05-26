@@ -97,8 +97,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginStart="33dp"
-                android:layout_marginTop="44dp"
-                android:background="#5D5F5D"
+                android:layout_marginTop="32dp"
                 android:text="오늘의 명언"
                 android:textColor="#41DADA"
                 android:textSize="20dp"
@@ -106,31 +105,15 @@
                 tools:layout_editor_absoluteY="121dp" />
 
             <TextView
-                android:id="@+id/Txt_Main_cm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="47dp"
-                android:layout_marginLeft="47dp"
-                android:layout_marginBottom="123dp"
-                android:background="#5D5F5D"
-                android:text="토론 주제"
-                android:textColor="#41DADA"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="324dp" />
-
-            <TextView
                 android:id="@+id/Txt_Main_br"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/Txt_Main_bw"
-                android:layout_marginStart="-107dp"
-                android:layout_marginTop="108dp"
-                android:layout_toEndOf="@+id/Txt_Main_bw"
-                android:background="#5D5F5D"
+                android:layout_below="@+id/tvSaying"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="33dp"
+                android:layout_marginLeft="33dp"
+                android:layout_marginTop="125dp"
                 android:text="철학 도서 추천"
                 android:textColor="#41DADA"
                 android:textSize="20dp"
@@ -139,14 +122,31 @@
 
             <TextView
                 android:id="@+id/tvSaying"
-                android:layout_width="336dp"
-                android:layout_height="80dp"
+                android:layout_width="338dp"
+                android:layout_height="102dp"
                 android:layout_below="@+id/Txt_Main_bw"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
                 android:layout_marginStart="53dp"
                 android:layout_marginLeft="53dp"
                 android:layout_marginTop="7dp"
+                android:background="#5D5F5D"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/tvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@+id/tvSaying"
+                android:layout_alignRight="@+id/tvSaying"
+                android:layout_alignBottom="@+id/tvSaying"
+                android:layout_marginEnd="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="#FFFFFF"
                 android:text="TextView" />
 
         </RelativeLayout>

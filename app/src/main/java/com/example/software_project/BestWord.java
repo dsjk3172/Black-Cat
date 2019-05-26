@@ -29,11 +29,13 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.example.software_project.MainActivity.setDB;
+
 public class BestWord extends AppCompatActivity { //software_project
 
     private Object imgbtn;
 
-    public static final String ROOT_DIR = "/data/data/com.example.software_project/databases/";
+    //public static final String ROOT_DIR = "/data/data/com.example.software_project/databases/";
     public SQLiteDatabase db;
     public Cursor c;
     ProductDBHelper mHelper;
@@ -59,7 +61,7 @@ public class BestWord extends AppCompatActivity { //software_project
 
         setDB(this);
         mHelper = new ProductDBHelper(this);
-        db = mHelper.getWritableDatabase();
+        db = mHelper.getReadableDatabase();
         c = db.rawQuery("SELECT * FROM Saying", null);
         startManagingCursor(c);
 
@@ -148,8 +150,7 @@ public class BestWord extends AppCompatActivity { //software_project
         });
     }
 
-    public static
-    void setDB(Context ctx) {
+    /*public static void setDB(Context ctx) {
         File folder = new File(ROOT_DIR);
         if(folder.exists()) {
         } else {
@@ -173,7 +174,7 @@ public class BestWord extends AppCompatActivity { //software_project
                 fo.close();
             } else {}
         } catch (IOException e) {}
-    }
+    }*/
 
     /*class ProductDBHelper extends SQLiteOpenHelper {  //새로 생성한 adapter 속성은 SQLiteOpenHelper이다.
         public ProductDBHelper(Context context) {
