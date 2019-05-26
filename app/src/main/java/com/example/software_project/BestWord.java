@@ -35,24 +35,11 @@ public class BestWord extends AppCompatActivity { //software_project
 
     private Object imgbtn;
 
-    //public static final String ROOT_DIR = "/data/data/com.example.software_project/databases/";
     public SQLiteDatabase db;
     public Cursor c;
     ProductDBHelper mHelper;
 
-    //private final String dbName = "sp.db";
-    //private final String tableName = "Saying";
-
-    //ArrayList<HashMap<String, String>> sayingList;
-
-
     ListView listview;
-
-    //private static final String TAG_NAME = "name";
-    //private static final String TAG_CONTENT ="content";
-
-    //SQLiteDatabase sampleDB = null;
-    //ListAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,19 +59,8 @@ public class BestWord extends AppCompatActivity { //software_project
         listview.setAdapter(adapter);
         String a;
 
-        //sayingList = new ArrayList<HashMap<String,String>>();
 
         while (c.moveToNext()) {
-            //String Name = c.getString(c.getColumnIndex("name"));
-            //String Content = c.getString(c.getColumnIndex("S_Content"));
-
-            //HashMap<String,String> saying = new HashMap<String,String>();
-
-            //saying.put(TAG_NAME,Name);
-            //saying.put(TAG_CONTENT,Content);
-
-            //sayingList.add(saying);
-
 
             a = c.getString(1);
             list.add(a);
@@ -149,47 +125,5 @@ public class BestWord extends AppCompatActivity { //software_project
             }
         });
     }
-
-    /*public static void setDB(Context ctx) {
-        File folder = new File(ROOT_DIR);
-        if(folder.exists()) {
-        } else {
-            folder.mkdirs();
-        }
-        AssetManager assetManager = ctx.getResources().getAssets();
-        File outfile = new File(ROOT_DIR+"sp.db");
-        InputStream is = null;
-        FileOutputStream fo = null;
-        long filesize = 0;
-        try {
-            is = assetManager.open("sp.db", AssetManager.ACCESS_BUFFER);
-            filesize = is.available();
-            if (outfile.length() <= 0) {
-                byte[] tempdata = new byte[(int) filesize];
-                is.read(tempdata);
-                is.close();
-                outfile.createNewFile();
-                fo = new FileOutputStream(outfile);
-                fo.write(tempdata);
-                fo.close();
-            } else {}
-        } catch (IOException e) {}
-    }*/
-
-    /*class ProductDBHelper extends SQLiteOpenHelper {  //새로 생성한 adapter 속성은 SQLiteOpenHelper이다.
-        public ProductDBHelper(Context context) {
-            super(context, "sp.db", null, 1);    // db명과 버전만 정의 한다.
-            // TODO Auto-generated constructor stub
-        }
-
-        @Override
-        public void onCreate(SQLiteDatabase db) {
-            // TODO Auto-generated method stub
-        }
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            // TODO Auto-generated method stub
-        }
-    }*/
 
 }
