@@ -1,15 +1,29 @@
 package com.example.software_project;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
+
+import static com.example.software_project.BestWord.setDB;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static final String ROOT_DIR = "/data/data/com.example.software_project/databases/";
+    public SQLiteDatabase db;
+    public Cursor c;
+    ProductDBHelper mHelper;
 
     private Object imgbtn;
 
@@ -17,9 +31,6 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Log.d ("Test", "Test");
-        Log.d ("New branch", "New branch");
 
         //메인 화면
 
@@ -78,11 +89,12 @@ public class MainActivity extends AppCompatActivity {
 
         TextView textView2 = (TextView) findViewById(R.id.Txt_Main_cm);
         Typeface typeface2 = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
-        textView.setTypeface(typeface);
+        textView2.setTypeface(typeface2);
 
         TextView textView3 = (TextView) findViewById(R.id.Txt_Main_br);
         Typeface typeface3 = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
-        textView.setTypeface(typeface);
+        textView3.setTypeface(typeface3);
+
 
     }
 }

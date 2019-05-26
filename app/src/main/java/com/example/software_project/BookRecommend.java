@@ -66,5 +66,9 @@ public class BookRecommend extends AppCompatActivity {
                 finish();
             }
         });
+
+        TextView textView = (TextView) findViewById(R.id.Txt_Br);
+        Typeface typeface3 = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
+        textView.setTypeface(typeface3);
     }
 }
