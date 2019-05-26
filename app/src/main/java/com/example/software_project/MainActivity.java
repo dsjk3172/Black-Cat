@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Log.d ("Test", "Test");
-        Log.d ("New branch", "New branch");
 
         //메인 화면
 
