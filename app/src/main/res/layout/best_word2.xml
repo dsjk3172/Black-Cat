@@ -78,8 +78,12 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_width="390dp"
+        android:layout_height="637dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="86dp">
 
         <RelativeLayout
             android:layout_width="410dp"

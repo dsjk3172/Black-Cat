@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ADF5F378"
-    tools:context=".BestWord">
+    tools:context=".MainActivity">
 
 
     <LinearLayout
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_Main"
+            android:id="@+id/imgbtn_Main"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:layout_alignParentStart="true"
@@ -36,7 +36,7 @@
 
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_BestWord"
+            android:id="@+id/imgbtn_BestWord"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="#49BFF0"
@@ -50,7 +50,7 @@
 
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_Community"
+            android:id="@+id/imgbtn_Community"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="#49BFF0"
@@ -64,7 +64,7 @@
 
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_BookRecommend"
+            android:id="@+id/imgbtn_BookRecommend"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="@drawable/padding2"
@@ -79,49 +79,47 @@
 
     <ScrollView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:layout_marginTop="70dp">
 
-    <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="582dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925">
+        <RelativeLayout
+            android:layout_width="410dp"
+            android:layout_height="582dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925">
 
+            <TextView
+                android:id="@+id/Txt_Bw_bw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="24dp"
+                android:background="#5D5F5D"
+                android:text="오늘의 명언"
+                android:textColor="#41DADA"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="121dp" />
 
-        <TextView
-            android:id="@+id/Txt_Bw_bw"
-            android:layout_width="122dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginTop="9dp"
-            android:background="#5D5F5D"
-            android:text="오늘의 명언"
-            android:textAlignment="center"
-            android:textColor="#41DADA"
-            android:textSize="20dp" />
-
-        <TextView
-            android:id="@+id/Txt_Bw_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="110dp"
-            android:background="#5D5F5D"
-            android:text="명언을 하게 된 배경"
-            android:textAlignment="center"
-            android:textColor="#41DADA"
-            android:textSize="20dp" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/Txt_Bw_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="113dp"
+                android:background="#5D5F5D"
+                android:text="명언을 하게 된 배경"
+                android:textColor="#41DADA"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="34dp"
+                tools:layout_editor_absoluteY="121dp" />
+        </RelativeLayout>
     </ScrollView>
 
 
