@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         String month = monthFormat.format(currentTime);
         String day = dayFormat.format(currentTime);
 
-        String Sday = month + day;
+        final String Sday = month + day;
 
         TextView tvSaying = (TextView) findViewById(R.id.tvSaying);
         TextView tvname = (TextView) findViewById(R.id.tvname);
@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         while (c.moveToNext()) {
 
-                content.set(c.getString(1));
+            content.set(c.getString(1));
             name.set(c.getString(4));
 
         }
@@ -122,10 +122,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //명언 세부
         tvSaying.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent_s = new Intent(getApplicationContext(), Saying.class);
+                intent_s.putExtra("sDay", Sday);
                 startActivity(intent_s);
                 finish();
             }

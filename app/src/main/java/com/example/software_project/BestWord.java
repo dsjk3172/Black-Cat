@@ -12,6 +12,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -57,13 +58,18 @@ public class BestWord extends AppCompatActivity { //software_project
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this,
                 android.R.layout.simple_list_item_1, list);
         listview.setAdapter(adapter);
+
+        final List<String> iday = new ArrayList<>();
         String a;
+        String b;
 
 
         while (c.moveToNext()) {
 
             a = c.getString(1);
             list.add(a);
+            b = c.getString(0);
+            iday.add(b);
         }
         c.close();
         db.close();
@@ -73,6 +79,17 @@ public class BestWord extends AppCompatActivity { //software_project
                 new String[]{TAG_NAME,TAG_CONTENT},
                 new int[]{ R.id.name, R.id.content}
         );*/
+
+        listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(getApplicationContext(), Saying.class);
+                String sDay = iday.get(position);
+                intent.putExtra("sDay", sDay);
+                startActivity(intent);
+                finish();
+            }
+        });
 
 
         //메인 화면
