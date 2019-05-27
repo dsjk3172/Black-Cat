@@ -1,21 +1,62 @@
 package com.example.software_project;
 
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import static com.example.software_project.MainActivity.setDB;
+
 public class BookRecommend extends AppCompatActivity {
 
     private Object imgbtn;
+    private RecyclerAdapter adapter;
+
+    public SQLiteDatabase db;
+    public Cursor c;
+    ProductDBHelper mHelper;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.book_recommend);
+
+        RecyclerView recyclerView = findViewById(R.id.recyclerView);
+
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(linearLayoutManager);
+
+        adapter = new RecyclerAdapter();
+        recyclerView.setAdapter(adapter);
+
+        setDB(this);
+        mHelper = new ProductDBHelper(this);
+        db = mHelper.getReadableDatabase();
+        c = db.rawQuery("SELECT * FROM Book", null);
+        startManagingCursor(c);
+
+        while (c.moveToNext()) {
+
+            Data data = new Data();
+            data.setTitle(c.getString(1));
+            data.setContent(c.getString(2));
+            data.setImg(c.getBlob(6));
+
+            adapter.addItem(data);
+        }
+        adapter.notifyDataSetChanged();
+        c.close();
+        db.close();
+
+
 
         //메인 화면
 
