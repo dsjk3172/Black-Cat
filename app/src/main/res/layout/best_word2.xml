@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ADF5F378"
-    tools:context=".BestWord">
+    tools:context=".BestWord2">
 
 
     <LinearLayout
@@ -81,47 +81,47 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent">
 
-    <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="582dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925">
+        <RelativeLayout
+            android:layout_width="410dp"
+            android:layout_height="582dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.925">
 
 
-        <TextView
-            android:id="@+id/Txt_Bw_bw"
-            android:layout_width="122dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginTop="9dp"
-            android:background="#5D5F5D"
-            android:text="오늘의 명언"
-            android:textAlignment="center"
-            android:textColor="#41DADA"
-            android:textSize="20dp" />
+            <TextView
+                android:id="@+id/Txt_Bw_bw"
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="19dp"
+                android:layout_marginLeft="19dp"
+                android:layout_marginTop="9dp"
+                android:background="#5D5F5D"
+                android:text="오늘의 명언"
+                android:textAlignment="center"
+                android:textColor="#41DADA"
+                android:textSize="20dp" />
 
-        <TextView
-            android:id="@+id/Txt_Bw_bg"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="22dp"
-            android:layout_marginLeft="22dp"
-            android:layout_marginTop="110dp"
-            android:background="#5D5F5D"
-            android:text="명언을 하게 된 배경"
-            android:textAlignment="center"
-            android:textColor="#41DADA"
-            android:textSize="20dp" />
-    </RelativeLayout>
+            <TextView
+                android:id="@+id/Txt_Bw_bg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="22dp"
+                android:layout_marginLeft="22dp"
+                android:layout_marginTop="110dp"
+                android:background="#5D5F5D"
+                android:text="명언을 하게 된 배경"
+                android:textAlignment="center"
+                android:textColor="#41DADA"
+                android:textSize="20dp" />
+        </RelativeLayout>
     </ScrollView>
 
 
