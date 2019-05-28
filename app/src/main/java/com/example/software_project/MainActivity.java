@@ -5,6 +5,8 @@ import android.content.Intent;
 import android.content.res.AssetManager;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.io.File;
@@ -69,12 +72,52 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        TextView tvbname = (TextView) findViewById(R.id.tvmbname);
+        TextView tvwriter = (TextView) findViewById(R.id.tvmwriter);
+        TextView tvpu = (TextView) findViewById(R.id.tvmpublisher);
+        TextView tvprice = (TextView) findViewById(R.id.tvmprice);
+        ImageView imgv = (ImageView) findViewById(R.id.mbimageView);
+
+        String bname="";
+        String writer ="";
+        String pub = "";
+        int price =0;
+        byte[] img = new byte[0];
+
+        c = db.rawQuery("SELECT * FROM Book Where _id='" + Sday + "'", null);
+
+        while (c.moveToNext()) {
+            bname=c.getString(1);
+            writer =c.getString(2);
+            price = c.getInt(3);
+            pub = c.getString(4);
+            img = c.getBlob(6);
+
+        }
+        Bitmap image = BitmapFactory.decodeByteArray(img,0,img.length);
+        String sprice = String.valueOf(price);
+
 
         c.close();
         db.close();
+        tvwriter.setText(writer);
+        tvbname.setText(bname);
+        tvpu.setText(pub);
+        tvprice.setText(sprice);
+        imgv.setImageBitmap(image);
 
         tvSaying.setText(content.get());
         tvname.setText(name.get());
+
+        imgv.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent_b = new Intent(getApplicationContext(), BookSpec.class);
+                intent_b.putExtra("sDay", Sday);
+                startActivity(intent_b);
+                finish();
+            }
+        });
 
         //메인 화면
 
@@ -141,10 +184,6 @@ public class MainActivity extends AppCompatActivity {
         TextView textView = (TextView) findViewById(R.id.Txt_Main_bw);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
         textView.setTypeface(typeface);
-
-        TextView textView2 = (TextView) findViewById(R.id.Txt_Main_cm);
-        Typeface typeface2 = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
-        textView2.setTypeface(typeface2);
 
         TextView textView3 = (TextView) findViewById(R.id.Txt_Main_br);
         Typeface typeface3 = Typeface.createFromAsset(getAssets(), "Maplestory Light.ttf");
