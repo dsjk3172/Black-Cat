@@ -7,7 +7,7 @@
     android:background="#ADF5F378"
     tools:context=".MainActivity">
 
-
+//상단 메뉴구성(상단바)
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
@@ -78,111 +78,149 @@
     </LinearLayout>
 
 
-
+// 중단부 화면구성(명언 출력)
     <LinearLayout
+        android:id="@+id/linearLayout_Mid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         android:weightSum="1"
         android:orientation="vertical">
 
+        //오늘의 명언
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"
-            android:layout_marginTop="100dp"
-            android:orientation="vertical">
+            android:layout_weight=".05">
 
             <TextView
                 android:id="@+id/Txt_Main_bw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:background="#5D5F5D"
                 android:text="오늘의 명언"
                 android:textColor="#41DADA"
                 android:textSize="20dp"/>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:weightSum="1"
-                android:orientation="vertical">
+        </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight=".7">
+        //명언 내용
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".2"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#5d5e5d">
 
             <TextView
                 android:id="@+id/tvSaying"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
                 android:text="TextView"
-                android:layout_marginStart="20dp"
-                android:textColor="#000000"
-                android:textSize="20dp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".3">
-            <TextView
-                android:id="@+id/tvname"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:text="TextView"
-                android:gravity="right"
-                android:layout_marginStart="20dp"
-                android:layout_marginEnd="30dp"
-                android:textColor="#000000" />
-            </LinearLayout>
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight=".5">
-
-            <TextView
-                android:id="@+id/Txt_Main_cm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvSaying"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="20dp"
-                android:text="토론 주제"
-                android:background="#5D5F5D"
-                android:textColor="#41DADA"
-                android:textSize="20dp"/>
-
-            </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".3">
-
-            <TextView
-                android:id="@+id/Txt_Main_br"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvSaying"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="20dp"
-                android:text="도서 추천"
-                android:background="#5D5F5D"
-                android:textColor="#41DADA"
+                android:textColor="#FFFFFF"
                 android:textSize="20dp" />
 
         </LinearLayout>
 
+        //명언 한 철학자 이름
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".05"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="#5d5e5d">
+
+            <TextView
+                android:id="@+id/tvname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="- TextView"
+                android:gravity="right"
+                android:layout_marginEnd="30dp"
+                android:textColor="#FFFFFF" />
+        </LinearLayout>
+
+
+    //하단부 화면구성(책 추천)
+
+
+            //도서 추천 제목
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="20dp"
+                android:layout_weight=".05">
+
+                <TextView
+                    android:id="@+id/Txt_Main_br"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="도서 추천"
+                    android:textColor="#41DADA"
+                    android:textSize="20dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".65">
+
+                //책 표지
+                <ImageView
+                    android:id="@+id/mbimageView"
+                    android:layout_width="106dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    tools:src="@tools:sample/avatars"
+                    android:layout_marginLeft="20dp" />
+
+            //책 이름
+            <TextView
+                android:id="@+id/tvmbname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView5"
+                android:layout_alignTop="@+id/mbimageView"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            //책 저자
+
+                <TextView
+                    android:id="@+id/tvmwriter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mbimageView"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@+id/tvmbname"
+                    android:text="TextView4" />
+
+            //책 출판사
+            <TextView
+                android:id="@+id/tvmpublisher"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvwriter"
+                android:layout_gravity="center"
+                android:text="TextView3" />
+
+            //책 가격
+            <TextView
+                android:id="@+id/tvmprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView8"
+                android:layout_gravity="center"
+                android:textColor="#000000"
+                android:textSize="20dp"/>
+
+            </LinearLayout>
         </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
