@@ -90,6 +90,94 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.925">
 
+            <ImageView
+                android:id="@+id/mbimageView"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Txt_Main_br"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="52dp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="252dp"
+                android:layout_marginRight="252dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvmbname"
+                android:layout_width="134dp"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/mbimageView"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="192dp"
+                android:layout_marginLeft="192dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="84dp"
+                android:layout_marginRight="84dp"
+                android:text="TextView"
+                android:textColor="@android:color/black"
+                android:textSize="20dp" />
+
+            <TextView
+                android:id="@+id/tvmwriter"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvmbname"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="194dp"
+                android:layout_marginLeft="194dp"
+                android:layout_marginTop="7dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvmpublisher"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvmwriter"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="193dp"
+                android:layout_marginLeft="193dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvmprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvmpublisher"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="193dp"
+                android:layout_marginLeft="193dp"
+                android:layout_marginTop="9dp"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/tvmprice"
+                android:layout_marginStart="0dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="0dp"
+                android:layout_toEndOf="@+id/tvmprice"
+                android:layout_toRightOf="@+id/tvmprice"
+                android:text="원" />
+
             <TextView
                 android:id="@+id/Txt_Main_bw"
                 android:layout_width="wrap_content"
