@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ADF5F378"
+    tools:context=".Saying">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="86dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageButton
+            android:id="@+id/s_imgbtn_Main"
+            android:layout_width="103dp"
+            android:layout_height="70dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/padding1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/main"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <ImageButton
+            android:id="@+id/s_imgbtn_BestWord"
+            android:layout_width="103dp"
+            android:layout_height="70dp"
+            android:background="#49BFF0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bestword"
+            tools:layout_editor_absoluteX="28dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <ImageButton
+            android:id="@+id/s_imgbtn_Community"
+            android:layout_width="103dp"
+            android:layout_height="70dp"
+            android:background="#49BFF0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/community"
+            tools:layout_editor_absoluteX="158dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+
+        <ImageButton
+            android:id="@+id/s_imgbtn_BookRecommend"
+            android:layout_width="103dp"
+            android:layout_height="70dp"
+            android:background="@drawable/padding2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/book_recommend"
+            tools:layout_editor_absoluteX="304dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="606dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <RelativeLayout
+            android:layout_width="410dp"
+            android:layout_height="582dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0">
+
+
+            <TextView
+                android:id="@+id/tvcontent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvname"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="75dp"
+                android:layout_marginLeft="75dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="71dp"
+                android:layout_marginRight="75dp"
+                android:background="#5D5F5D"
+                android:padding="10dp"
+                android:text="TextView"
+                android:textColor="#FFFFFF"
+                android:textSize="17dp" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="142dp"
+                android:layout_marginLeft="142dp"
+                android:layout_marginTop="21dp"
+                android:layout_marginEnd="140dp"
+                android:layout_marginRight="140dp"
+                tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/tvname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/imageView"
+                android:layout_alignStart="@+id/imageView"
+                android:layout_alignLeft="@+id/imageView"
+                android:layout_alignEnd="@+id/imageView"
+                android:layout_alignRight="@+id/imageView"
+                android:layout_marginStart="35dp"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginRight="35dp"
+                android:gravity="center_horizontal"
+                android:text="TextView" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/tvcontent"
+                android:layout_marginBottom="-42dp"
+                android:background="?android:attr/listDivider" />
+
+            <TextView
+                android:id="@+id/tvdes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_alignStart="@+id/divider"
+                android:layout_alignLeft="@+id/divider"
+                android:layout_alignEnd="@+id/divider"
+                android:layout_alignRight="@+id/divider"
+                android:layout_marginStart="18dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginTop="59dp"
+                android:layout_marginEnd="17dp"
+                android:layout_marginRight="17dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvp_des"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider2"
+                android:layout_alignStart="@+id/divider2"
+                android:layout_alignLeft="@+id/divider2"
+                android:layout_alignEnd="@+id/divider2"
+                android:layout_alignRight="@+id/divider2"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="74dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:text="TextView" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@+id/tvdes"
+                android:layout_marginBottom="-55dp"
+                android:background="?android:attr/listDivider" />
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</android.support.constraint.ConstraintLayout>
