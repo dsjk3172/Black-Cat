@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,7 +12,6 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -42,7 +40,7 @@ public class BookRecommend extends AppCompatActivity {
 
         adapter = new RecyclerAdapter();
         recyclerView.setAdapter(adapter);
-        final ArrayList<Data> dataArrayList = new ArrayList<>();
+        final ArrayList<String> idList = new ArrayList<>();
 
         setDB(this);
         mHelper = new ProductDBHelper(this);
@@ -57,8 +55,10 @@ public class BookRecommend extends AppCompatActivity {
             data.setContent(c.getString(2));
             data.setImg(c.getBlob(6));
 
+            String id = c.getString(0);
+
             adapter.addItem(data);
-            dataArrayList.add(data);
+            idList.add(id);
         }
         adapter.notifyDataSetChanged();
         c.close();
@@ -67,10 +67,12 @@ public class BookRecommend extends AppCompatActivity {
         recyclerView.addOnItemTouchListener(new RecyclerTouchListener(getApplicationContext(), recyclerView, new ClickListener() {
             @Override
             public void onClick(View view, int position) {
-                Data data = dataArrayList.get(position);
-                Intent intent = new Intent(getApplicationContext(), Book_Spec.class);
-                startActivity(intent);
-                finish();
+                String sId = idList.get(position);
+                Intent intent_sp = new Intent(getApplicationContext(), BookSpec.class);
+                intent_sp.putExtra("sDay",sId);
+                startActivity(intent_sp);
+                //Toast.makeText(getApplicationContext(), sId, Toast.LENGTH_LONG).show();
+                //finish();
             }
 
             @Override

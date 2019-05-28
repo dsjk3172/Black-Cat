@@ -14,7 +14,8 @@ import android.widget.TextView;
 
 import static com.example.software_project.MainActivity.setDB;
 
-public class Book_Spec extends AppCompatActivity {private Object imgbtn;
+public class BookSpec extends AppCompatActivity {
+    private Object imgbtn;
 
     public SQLiteDatabase db;
     public Cursor c;
@@ -25,53 +26,60 @@ public class Book_Spec extends AppCompatActivity {private Object imgbtn;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.book_spec);
 
-        Intent intent_s = getIntent();
-        String s_id = intent_s.getExtras().getString("sDay");
+        Intent intentb = getIntent();
+        String b_id = intentb.getExtras().getString("sDay");
 
-
-        TextView tvname = (TextView) findViewById(R.id.tvname);
+       // TextView tvname = (TextView) findViewById(R.id.tvbname);
+        //tvname.setText(b_id);
+        TextView tvname = (TextView) findViewById(R.id.tvbname);
         TextView tvwriter = (TextView) findViewById(R.id.tvwriter);
-        TextView tvdes = (TextView) findViewById(R.id.tvdes);
+        TextView tvdes = (TextView) findViewById(R.id.tvbdes);
         TextView tvpu = (TextView) findViewById(R.id.tvpublisher);
         TextView tvprice = (TextView) findViewById(R.id.tvprice);
-        ImageView imgv = (ImageView) findViewById(R.id.imageView);
+        ImageView imgv = (ImageView) findViewById(R.id.bimageView);
 
         setDB(this);
         mHelper = new ProductDBHelper(this);
         db = mHelper.getReadableDatabase();
-        c = db.rawQuery("SELECT * FROM Book Where _id='" + s_id + "'", null);
+        c = db.rawQuery("SELECT * FROM Book Where _id='" + b_id + "'", null);
         startManagingCursor(c);
 
-        String content="";
-        String name ="";
+        String name="";
+        String writer ="";
         String des = "";
-        String p_des = "";
+        String pub = "";
         int price =0;
 
         byte[] img = new byte[0];
 
 
         while (c.moveToNext()) {
+            name=c.getString(1);
+            writer =c.getString(2);
+            price = c.getInt(3);
+            pub = c.getString(4);
+            des = c.getString(5);
+            img = c.getBlob(6);
 
         }
         //c.close();
 
-
         Bitmap image = BitmapFactory.decodeByteArray(img,0,img.length);
+        String sprice = String.valueOf(price);
 
         c.close();
         db.close();
 
-        tvwriter.setText(content);
+        tvwriter.setText(writer);
         tvname.setText(name);
         tvdes.setText(des);
-        tvpu.setText(p_des);
-        tvprice.setText();
+        tvpu.setText(pub);
+        tvprice.setText(sprice);
         imgv.setImageBitmap(image);
 
         //메인 화면
 
-        ImageButton imgbtn_main = (ImageButton) findViewById(R.id.s_imgbtn_Main);
+        ImageButton imgbtn_main = (ImageButton) findViewById(R.id.bs_imgbtn_Main);
         imgbtn_main.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -83,7 +91,7 @@ public class Book_Spec extends AppCompatActivity {private Object imgbtn;
         });
 
         //명언 액티비티
-        ImageButton imgbtn_bestword = (ImageButton) findViewById(R.id.s_imgbtn_BestWord);
+        ImageButton imgbtn_bestword = (ImageButton) findViewById(R.id.bs_imgbtn_BestWord);
         imgbtn_bestword.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -95,7 +103,7 @@ public class Book_Spec extends AppCompatActivity {private Object imgbtn;
         });
 
         //커뮤니티 액티비티
-        ImageButton imgbtn_community = (ImageButton) findViewById(R.id.s_imgbtn_Community);
+        ImageButton imgbtn_community = (ImageButton) findViewById(R.id.bs_imgbtn_Community);
         imgbtn_community.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -107,7 +115,7 @@ public class Book_Spec extends AppCompatActivity {private Object imgbtn;
         });
 
         //책 추천 액티비티
-        ImageButton imgbtn_bookrecommend = (ImageButton) findViewById(R.id.s_imgbtn_BookRecommend);
+        ImageButton imgbtn_bookrecommend = (ImageButton) findViewById(R.id.bs_imgbtn_BookRecommend);
         imgbtn_bookrecommend.setOnClickListener(new View.OnClickListener() {
 
             @Override
