@@ -57,7 +57,7 @@ public class BestWord2 extends AppCompatActivity {
 
         //메인 화면
 
-        ImageButton imgbtn_main = (ImageButton) findViewById(R.id.bw_imgbtn_Main);
+        ImageButton imgbtn_main = (ImageButton) findViewById(R.id.imgbtn_Main);
         imgbtn_main.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -69,7 +69,7 @@ public class BestWord2 extends AppCompatActivity {
         });
 
         //명언 액티비티
-        ImageButton imgbtn_bestword = (ImageButton) findViewById(R.id.bw_imgbtn_BestWord);
+        ImageButton imgbtn_bestword = (ImageButton) findViewById(R.id.imgbtn_BestWord);
         imgbtn_bestword.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -81,7 +81,7 @@ public class BestWord2 extends AppCompatActivity {
         });
 
         //커뮤니티 액티비티
-        ImageButton imgbtn_community = (ImageButton) findViewById(R.id.bw_imgbtn_Community);
+        ImageButton imgbtn_community = (ImageButton) findViewById(R.id.imgbtn_Community);
         imgbtn_community.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -93,7 +93,7 @@ public class BestWord2 extends AppCompatActivity {
         });
 
         //책 추천 액티비티
-        ImageButton imgbtn_bookrecommend = (ImageButton) findViewById(R.id.bw_imgbtn_BookRecommend);
+        ImageButton imgbtn_bookrecommend = (ImageButton) findViewById(R.id.imgbtn_BookRecommend);
         imgbtn_bookrecommend.setOnClickListener(new View.OnClickListener() {
 
             @Override

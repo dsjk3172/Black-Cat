@@ -78,36 +78,42 @@
     </LinearLayout>
 
 
-    <RelativeLayout
-        android:layout_width="410dp"
-        android:layout_height="582dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.925">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:orientation="vertical">
 
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".05"
+            android:layout_marginTop="100dp">
         <TextView
             android:id="@+id/Txt_Br"
-            android:layout_width="130dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="19dp"
-            android:layout_marginLeft="19dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginStart="20dp"
             android:background="#5D5F5D"
             android:text="철학 도서 추천"
-            android:textAlignment="center"
             android:textColor="#41DADA"
             android:textSize="20dp" />
+        </LinearLayout>
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".95">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".95">
 
-    </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    </LinearLayout>
 
 
 

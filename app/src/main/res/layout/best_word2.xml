@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_Main"
+            android:id="@+id/imgbtn_Main"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:layout_alignParentStart="true"
@@ -36,7 +36,7 @@
 
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_BestWord"
+            android:id="@+id/imgbtn_BestWord"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="#49BFF0"
@@ -50,7 +50,7 @@
 
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_Community"
+            android:id="@+id/imgbtn_Community"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="#49BFF0"
@@ -64,7 +64,7 @@
 
 
         <ImageButton
-            android:id="@+id/bw_imgbtn_BookRecommend"
+            android:id="@+id/imgbtn_BookRecommend"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="@drawable/padding2"
@@ -77,56 +77,45 @@
             tools:layout_editor_absoluteY="16dp" />
     </LinearLayout>
 
-    <ScrollView
-        android:layout_width="390dp"
-        android:layout_height="637dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="86dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <RelativeLayout
-            android:layout_width="410dp"
-            android:layout_height="582dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.925">
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".3"
+            android:layout_marginTop="100dp">
 
             <TextView
                 android:id="@+id/Txt_Bw_bw"
-                android:layout_width="122dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginLeft="19dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginStart="20dp"
                 android:background="#5D5F5D"
                 android:text="오늘의 명언"
-                android:textAlignment="center"
                 android:textColor="#41DADA"
                 android:textSize="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".7">
 
             <TextView
                 android:id="@+id/Txt_Bw_bg"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="22dp"
-                android:layout_marginLeft="22dp"
-                android:layout_marginTop="110dp"
+                android:layout_marginStart="20dp"
                 android:background="#5D5F5D"
                 android:text="명언을 하게 된 배경"
-                android:textAlignment="center"
                 android:textColor="#41DADA"
-                android:textSize="20dp" />
-        </RelativeLayout>
-    </ScrollView>
+                android:textSize="20dp"/>
+        </LinearLayout>
+    </LinearLayout>
 
 
 
