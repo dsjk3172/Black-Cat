@@ -36,6 +36,7 @@
         <activity android:name=".Community"/>
         <activity android:name=".BookRecommend"/>
         <activity android:name=".Saying"/>
+        <activity android:name=".Book_Spec"/>
     </application>
 
 </manifest>
