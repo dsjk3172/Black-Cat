@@ -6,20 +6,16 @@
     android:layout_height="match_parent"
     android:background="#ADF5F378"
     tools:context=".MainActivity">
-
-//상단 메뉴구성(상단바)
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="86dp"
         android:layout_marginBottom="8dp"
-        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0">
-
         <ImageButton
             android:id="@+id/imgbtn_Main"
             android:layout_width="103dp"
@@ -33,10 +29,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/main"
             tools:layout_editor_absoluteX="28dp"
-            tools:layout_editor_absoluteY="16dp"
-            android:layout_alignParentLeft="true" />
-
-
+            tools:layout_editor_absoluteY="16dp" />
         <ImageButton
             android:id="@+id/imgbtn_BestWord"
             android:layout_width="103dp"
@@ -49,8 +42,6 @@
             app:srcCompat="@drawable/bestword"
             tools:layout_editor_absoluteX="28dp"
             tools:layout_editor_absoluteY="16dp" />
-
-
         <ImageButton
             android:id="@+id/imgbtn_Community"
             android:layout_width="103dp"
@@ -63,8 +54,6 @@
             app:srcCompat="@drawable/community"
             tools:layout_editor_absoluteX="158dp"
             tools:layout_editor_absoluteY="16dp" />
-
-
         <ImageButton
             android:id="@+id/imgbtn_BookRecommend"
             android:layout_width="103dp"
@@ -79,154 +68,151 @@
             tools:layout_editor_absoluteY="16dp" />
     </LinearLayout>
 
-
-// 중단부 화면구성(명언 출력)
-    <LinearLayout
-        android:id="@+id/linearLayout_Mid"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
-        android:weightSum="1"
-        android:orientation="vertical">
-
-        //오늘의 명언
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05"
+            android:layout_height="match_parent"
+            android:weightSum="1"
             android:orientation="vertical">
 
+            //오늘의 명언
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".1"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="100dp">
             <TextView
                 android:id="@+id/Txt_Main_bw"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
                 android:text="오늘의 명언"
                 android:textColor="#41DADA"
-                android:textSize="20dp"
-                android:layout_marginLeft="20dp" />
+                android:textSize="20dp"/>
+            </LinearLayout>
 
-        </LinearLayout>
-
-        //명언 내용
+            //명언 내용
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".2"
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="#5d5e5d"
-            android:orientation="vertical">
-
+            android:layout_marginEnd="30dp"
+            android:layout_weight=".1">
             <TextView
                 android:id="@+id/tvSaying"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginStart="10dp"
+                android:background="#5D5F5D"
+                android:padding="10dp"
                 android:text="TextView"
                 android:textColor="#FFFFFF"
-                android:textSize="20dp"
-                android:layout_marginLeft="10dp" />
-
+                android:textSize="17dp" />
         </LinearLayout>
 
-        //명언 한 철학자 이름
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight=".05"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:background="#5d5e5d"
-            android:orientation="vertical">
-
+            //명언 한 사람
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginEnd="30dp"
+                android:layout_weight=".1">
             <TextView
                 android:id="@+id/tvname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="- TextView"
                 android:gravity="right"
-                android:layout_marginEnd="30dp"
-                android:textColor="#FFFFFF"
-                android:layout_marginRight="30dp" />
+                android:background="#5D5F5D"
+                android:text="- TextView"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
 
-
-    //하단부 화면구성(책 추천)
-
-
-            //도서 추천 제목
+            //도서 추천
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_marginTop="20dp"
-                android:layout_weight=".05"
-                android:orientation="vertical">
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:layout_weight=".1">
+            <TextView
+                android:id="@+id/Txt_Main_br"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="도서 추천"
+                android:textColor="#41DADA"
+                android:textSize="20dp" />
+        </LinearLayout>
 
-                <TextView
-                    android:id="@+id/Txt_Main_br"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:text="도서 추천"
-                    android:textColor="#41DADA"
-                    android:textSize="20dp"
-                    android:layout_marginLeft="20dp" />
-
-            </LinearLayout>
-
-           <LinearLayout
+            //도서 표지
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".65"
-               android:orientation="vertical">
+                android:layout_marginStart="20dp"
+                android:layout_weight=".2">
+            <ImageView
+                android:id="@+id/mbimageView"
+                android:layout_width="106dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Txt_Main_br"
+                tools:src="@tools:sample/avatars" />
+        </LinearLayout>
 
-                //책 표지
-                <ImageView
-                    android:id="@+id/mbimageView"
-                    android:layout_width="106dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="10dp"
-                    tools:src="@tools:sample/avatars"
-                    android:layout_marginLeft="20dp" />
-
-            //책 이름
+            //도서 명
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight=".1">
             <TextView
                 android:id="@+id/tvmbname"
-                android:layout_width="wrap_content"
+                android:layout_width="134dp"
                 android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/mbimageView"
                 android:text="TextView"
                 android:textColor="@android:color/black"
                 android:textSize="20dp" />
+        </LinearLayout>
 
-            //책 저자
-                <TextView
-                    android:id="@+id/tvmwriter"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@+id/tvmbname"
-                    android:text="TextView" />
+            //도서 저자
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight=".1">
+            <TextView
+                android:id="@+id/tvmwriter"
+                android:layout_width="139dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvmbname"
+                android:text="TextView" />
+        </LinearLayout>
 
-            //책 출판사
+            //도서 출판사
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight=".1">
             <TextView
                 android:id="@+id/tvmpublisher"
-                android:layout_width="wrap_content"
+                android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvwriter"
+                android:layout_below="@+id/tvmwriter"
                 android:text="TextView" />
+        </LinearLayout>
 
-            //책 가격
+            //도서 가격
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="20dp"
+                android:layout_weight=".1">
             <TextView
                 android:id="@+id/tvmprice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView"
-                android:textColor="#000000"
-                android:textSize="20dp"/>
-
-            </LinearLayout>
+                android:layout_below="@+id/tvmpublisher"
+                android:text="TextView" />
         </LinearLayout>
-
+        </LinearLayout>
 </android.support.constraint.ConstraintLayout>
