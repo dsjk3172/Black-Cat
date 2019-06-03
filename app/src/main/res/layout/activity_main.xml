@@ -78,7 +78,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:layout_weight=".1"
+                android:layout_weight=".05"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="100dp">
             <TextView
@@ -97,7 +97,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginStart="20dp"
             android:layout_marginEnd="30dp"
-            android:layout_weight=".1">
+            android:layout_weight=".2">
             <TextView
                 android:id="@+id/tvSaying"
                 android:layout_width="match_parent"
@@ -115,14 +115,14 @@
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginEnd="30dp"
-                android:layout_weight=".1">
+                android:layout_weight=".05">
             <TextView
                 android:id="@+id/tvname"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="right"
                 android:background="#5D5F5D"
-                android:text="- TextView"
+                android:text="TextView   "
                 android:textColor="#FFFFFF" />
         </LinearLayout>
 
@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
-                android:layout_weight=".2">
+                android:layout_weight=".3">
             <ImageView
                 android:id="@+id/mbimageView"
                 android:layout_width="106dp"
@@ -178,7 +178,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
-                android:layout_weight=".1">
+                android:layout_weight=".05">
             <TextView
                 android:id="@+id/tvmwriter"
                 android:layout_width="139dp"
@@ -192,7 +192,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
-                android:layout_weight=".1">
+                android:layout_weight=".05">
             <TextView
                 android:id="@+id/tvmpublisher"
                 android:layout_width="140dp"
@@ -206,7 +206,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_marginStart="20dp"
-                android:layout_weight=".1">
+                android:layout_marginBottom="30dp"
+                android:layout_weight=".05">
             <TextView
                 android:id="@+id/tvmprice"
                 android:layout_width="wrap_content"
