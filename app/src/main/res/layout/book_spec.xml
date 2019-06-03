@@ -143,8 +143,8 @@
                 android:layout_marginStart="160dp"
                 android:layout_marginLeft="160dp"
                 android:layout_marginTop="18dp"
-                android:layout_toEndOf="@+id/imageView"
-                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/bimageView"
+                android:layout_toRightOf="@+id/bimageView"
                 android:text="TextView" />
 
             <TextView
@@ -157,8 +157,8 @@
                 android:layout_marginStart="159dp"
                 android:layout_marginLeft="159dp"
                 android:layout_marginTop="13dp"
-                android:layout_toEndOf="@+id/imageView"
-                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/bimageView"
+                android:layout_toRightOf="@+id/bimageView"
                 android:text="TextView" />
 
             <TextView
@@ -171,8 +171,8 @@
                 android:layout_marginStart="159dp"
                 android:layout_marginLeft="159dp"
                 android:layout_marginTop="13dp"
-                android:layout_toEndOf="@+id/imageView"
-                android:layout_toRightOf="@+id/imageView"
+                android:layout_toEndOf="@+id/bimageView"
+                android:layout_toRightOf="@+id/bimageView"
                 android:text="TextView" />
 
             <TextView
