@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent_b = new Intent(getApplicationContext(), BookSpec.class);
                 intent_b.putExtra("sDay", Sday);
                 startActivity(intent_b);
-                finish();
+                //finish();
             }
         });
 
@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_ma = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent_ma);
-                finish();
+                //finish();
             }
         });
 
@@ -135,7 +135,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_bw = new Intent(getApplicationContext(), BestWord.class);
                 startActivity(intent_bw);
-                finish();
+                //finish();
             }
         });
 
@@ -147,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_cm = new Intent(getApplicationContext(), Community.class);
                 startActivity(intent_cm);
-                finish();
+                //finish();
             }
         });
 
@@ -160,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_br = new Intent(getApplicationContext(), BookRecommend.class);
                 startActivity(intent_br);
-                finish();
+                //finish();
             }
         });
 
@@ -171,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent_s = new Intent(getApplicationContext(), Saying.class);
                 intent_s.putExtra("sDay", Sday);
                 startActivity(intent_s);
-                finish();
+                //finish();
             }
         });
 
@@ -211,6 +211,12 @@ public class MainActivity extends AppCompatActivity {
                 fo.close();
             } else {}
         } catch (IOException e) {}
+    }
+
+    @Override
+    public void onBackPressed() {
+        //this.finish();
+        //super.onBackPressed();
     }
 
 }

@@ -91,7 +91,7 @@ public class BookRecommend extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_ma = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent_ma);
-                finish();
+                //finish();
             }
         });
 
@@ -103,7 +103,7 @@ public class BookRecommend extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_bw = new Intent(getApplicationContext(), BestWord.class);
                 startActivity(intent_bw);
-                finish();
+                //finish();
             }
         });
 
@@ -115,7 +115,7 @@ public class BookRecommend extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_cm = new Intent(getApplicationContext(), Community.class);
                 startActivity(intent_cm);
-                finish();
+                //finish();
             }
         });
 
@@ -128,7 +128,7 @@ public class BookRecommend extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_br = new Intent(getApplicationContext(), BookRecommend.class);
                 startActivity(intent_br);
-                finish();
+                //finish();
             }
         });
 
@@ -178,5 +178,11 @@ public class BookRecommend extends AppCompatActivity {
         @Override
         public void onRequestDisallowInterceptTouchEvent(boolean disallowIntercept) {
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        //this.finish();
+        //super.onBackPressed();
     }
 }
