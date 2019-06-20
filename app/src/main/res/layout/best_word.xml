@@ -86,15 +86,11 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.925">
 
-
-
-        <TextView
+        <ListView
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="명언 액티비티입니다"
-            android:textAlignment="center"
-            android:textSize="30dp"/>
-
+            android:layout_height="match_parent"
+            android:scrollbars="vertical" />
     </RelativeLayout>
 
 

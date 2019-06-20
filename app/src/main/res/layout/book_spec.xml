@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ADF5F378"
-    tools:context=".MainActivity">
+    tools:context=".BookSpec">
 
 
     <LinearLayout
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageButton
-            android:id="@+id/imgbtn_Main"
+            android:id="@+id/bs_imgbtn_Main"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:layout_alignParentStart="true"
@@ -36,7 +36,7 @@
 
 
         <ImageButton
-            android:id="@+id/imgbtn_BestWord"
+            android:id="@+id/bs_imgbtn_BestWord"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="#49BFF0"
@@ -50,7 +50,7 @@
 
 
         <ImageButton
-            android:id="@+id/imgbtn_Community"
+            android:id="@+id/bs_imgbtn_Community"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="#49BFF0"
@@ -64,7 +64,7 @@
 
 
         <ImageButton
-            android:id="@+id/imgbtn_BookRecommend"
+            android:id="@+id/bs_imgbtn_BookRecommend"
             android:layout_width="103dp"
             android:layout_height="70dp"
             android:background="@drawable/padding2"
@@ -78,9 +78,10 @@
     </LinearLayout>
 
     <ScrollView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_marginTop="70dp">
+        android:layout_width="match_parent"
+        android:layout_height="606dp"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:layout_editor_absoluteX="0dp">
 
         <RelativeLayout
             android:layout_width="410dp"
@@ -88,155 +89,117 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.925">
+            app:layout_constraintVertical_bias="1.0">
+
 
             <ImageView
-                android:id="@+id/mbimageView"
-                android:layout_width="106dp"
+                android:id="@+id/bimageView"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/Txt_Main_br"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
-                android:layout_marginStart="52dp"
-                android:layout_marginLeft="52dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="252dp"
-                android:layout_marginRight="252dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="272dp"
+                android:layout_marginRight="272dp"
                 tools:src="@tools:sample/avatars" />
 
-            <TextView
-                android:id="@+id/tvmbname"
-                android:layout_width="134dp"
-                android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/mbimageView"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_marginStart="192dp"
-                android:layout_marginLeft="192dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="84dp"
-                android:layout_marginRight="84dp"
-                android:text="TextView"
-                android:textColor="@android:color/black"
-                android:textSize="20dp" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/bimageView"
+                android:layout_marginTop="43dp"
+                android:background="?android:attr/listDivider" />
 
             <TextView
-                android:id="@+id/tvmwriter"
+                android:id="@+id/tvbdes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/divider"
+                android:layout_alignStart="@+id/divider"
+                android:layout_alignLeft="@+id/divider"
+                android:layout_alignEnd="@+id/divider"
+                android:layout_alignRight="@+id/divider"
+                android:layout_marginStart="17dp"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginEnd="18dp"
+                android:layout_marginRight="18dp"
+                android:text="TextView" />
+
+            <TextView
+                android:id="@+id/tvwriter"
                 android:layout_width="139dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvmbname"
+                android:layout_below="@+id/tvbname"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginStart="194dp"
-                android:layout_marginLeft="194dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginStart="160dp"
+                android:layout_marginLeft="160dp"
+                android:layout_marginTop="18dp"
                 android:layout_toEndOf="@+id/imageView"
                 android:layout_toRightOf="@+id/imageView"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/tvmpublisher"
+                android:id="@+id/tvpublisher"
                 android:layout_width="140dp"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvmwriter"
+                android:layout_below="@+id/tvwriter"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginStart="193dp"
-                android:layout_marginLeft="193dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginStart="159dp"
+                android:layout_marginLeft="159dp"
+                android:layout_marginTop="13dp"
                 android:layout_toEndOf="@+id/imageView"
                 android:layout_toRightOf="@+id/imageView"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/tvmprice"
+                android:id="@+id/tvprice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvmpublisher"
+                android:layout_below="@+id/tvpublisher"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_marginStart="193dp"
-                android:layout_marginLeft="193dp"
-                android:layout_marginTop="9dp"
+                android:layout_marginStart="159dp"
+                android:layout_marginLeft="159dp"
+                android:layout_marginTop="13dp"
                 android:layout_toEndOf="@+id/imageView"
                 android:layout_toRightOf="@+id/imageView"
                 android:text="TextView" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/tvmprice"
-                android:layout_marginStart="0dp"
-                android:layout_marginLeft="0dp"
+                android:layout_alignTop="@+id/tvprice"
+                android:layout_marginStart="1dp"
+                android:layout_marginLeft="1dp"
                 android:layout_marginTop="0dp"
-                android:layout_toEndOf="@+id/tvmprice"
-                android:layout_toRightOf="@+id/tvmprice"
+                android:layout_toEndOf="@+id/tvprice"
+                android:layout_toRightOf="@+id/tvprice"
                 android:text="원" />
 
             <TextView
-                android:id="@+id/Txt_Main_bw"
-                android:layout_width="wrap_content"
+                android:id="@+id/tvbname"
+                android:layout_width="134dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="33dp"
-                android:layout_marginTop="32dp"
-                android:text="오늘의 명언"
-                android:textColor="#41DADA"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="121dp" />
-
-            <TextView
-                android:id="@+id/Txt_Main_br"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvSaying"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="33dp"
-                android:layout_marginLeft="33dp"
-                android:layout_marginTop="89dp"
-                android:text="도서 추천"
-                android:textColor="#41DADA"
-                android:textSize="20dp"
-                tools:layout_editor_absoluteX="34dp"
-                tools:layout_editor_absoluteY="470dp" />
-
-            <TextView
-                android:id="@+id/tvSaying"
-                android:layout_width="338dp"
-                android:layout_height="102dp"
-                android:layout_below="@+id/Txt_Main_bw"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentLeft="true"
-                android:layout_marginStart="53dp"
-                android:layout_marginLeft="53dp"
-                android:layout_marginTop="7dp"
-                android:background="#5D5F5D"
-                android:padding="10dp"
+                android:layout_alignTop="@+id/bimageView"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="0dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginRight="116dp"
                 android:text="TextView"
-                android:textColor="#FFFFFF"
-                android:textSize="17dp" />
-
-            <TextView
-                android:id="@+id/tvname"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/tvSaying"
-                android:layout_alignRight="@+id/tvSaying"
-                android:layout_alignBottom="@+id/tvSaying"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp"
-                android:layout_marginBottom="8dp"
-                android:text="TextView"
-                android:textColor="#FFFFFF" />
-
+                android:textSize="20dp"
+                android:textColor="@android:color/black"/>
         </RelativeLayout>
     </ScrollView>
 

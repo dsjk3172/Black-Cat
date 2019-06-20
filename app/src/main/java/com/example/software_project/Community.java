@@ -6,8 +6,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.webkit.WebViewClient;
+import android.webkit.WebView;
 
 public class Community extends AppCompatActivity {
 
@@ -28,7 +31,7 @@ public class Community extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_ma = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent_ma);
-                finish();
+                //finish();
             }
         });
 
@@ -40,7 +43,7 @@ public class Community extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_bw = new Intent(getApplicationContext(), BestWord.class);
                 startActivity(intent_bw);
-                finish();
+               // finish();
             }
         });
 
@@ -52,7 +55,7 @@ public class Community extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_cm = new Intent(getApplicationContext(), Community.class);
                 startActivity(intent_cm);
-                finish();
+                //finish();
             }
         });
 
@@ -65,12 +68,18 @@ public class Community extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent_br = new Intent(getApplicationContext(), BookRecommend.class);
                 startActivity(intent_br);
-                finish();
+                //finish();
             }
         });
 
         // 웹뷰 액티비티
         webView = (WebView)findViewById(R.id.webView);
-        webView.loadUrl("http://softwareblackcat.com");
+        webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("http://www.softwareblackcat.com/");
+    }
+    @Override
+    public void onBackPressed() {
+        //this.finish();
+        //super.onBackPressed();
     }
 }
